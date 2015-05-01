@@ -1,38 +1,28 @@
--- Part 1: Write the following queries.
-
 -- 1. Select all columns for all brands in the Brands table.
 
 -- 2. Select all columns for all car models made by Pontiac in the Models table.
 
--- 3. Select the brand name and model name for all models made in 1968 from the Models table.
-
--- 4. Select the brand name, headquarters, and founding date for the newest brand from the Brands table.
-
--- 5. Select the model name, brand name, and headquarters for the Ford Mustang from the Models and Brands tables.
-
--- 6. Select all rows for the three oldest brands from the Brands table (Hint: you can use LIMIT and ORDER BY).
-
--- 7. Select the oldest Chevrolet *model* and its year.
+-- 3. Select the brand name and model 
+--    name for all models made in 1964 from the Models table.
 
 
--- 8. Select the make with more than 5 models.
+-- 4. Select the model name, brand name, and headquarters for the Ford Mustang 
+--    from the Models and Brands tables.
 
+-- 5. Select all rows for the three oldest brands 
+--    from the Brands table (Hint: you can use LIMIT and ORDER BY).
 
--- 9. Select rows 15-25 of the DB in alphabetical order by model name.
+-- 6. Count the Ford models in the database (output should be a **number**).
 
+-- 7. Select the **name** of any and all car brands that are not discontinued.
 
--- 10. Select all car models from the year 1960, regardless of 
--- whether their brand appears in the car brands table.
--- including their make, 
--- and the year their brand was founded. 
+-- 8. Select rows 15-25 of the DB in alphabetical order by model name.
 
-
--- 11. Without using any type of JOIN, select the model of cars 
--- that whose year was when any brand was founded.
-
-
--- 12. Show every single car brand-car model combination possible with the given data.
-
+-- 9. Select the **brand, name, and year the model's brand was 
+--    founded** for all of the models from 1960. Include row(s)
+--    for model(s) even if its brand is not in the Brands table.
+--    (The year the brand was founded should be ``null`` if 
+--    the brand is not in the Brands table.)
 
 
 
@@ -51,9 +41,7 @@
     --     ON b.name = m.brand_name
     -- WHERE b.discontinued IS NULL;
 
-
-
--- 2. #. Modify this left join so it only selects models that have brands in the Brands table.
+-- 2. Modify this left join so it only selects models that have brands in the Brands table.
 -- before: 
     -- SELECT m.name,
     --        m.brand_name,
